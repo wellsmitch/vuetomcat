@@ -10,7 +10,7 @@
     </a-layout-header>
     <a-layout-content style="margin: 0 16px">
       <a-alert message="Warning text" banner/>
-      <h2>这是css 的内容</h2>
+      <h2>这是mysql 基础语法 的内容</h2>
     </a-layout-content>
     <a-layout-footer style="text-align: center">
       welcome to wellsimtch's castle!
@@ -21,18 +21,19 @@
 
 <script>
   export default {
-    name: "cssindex",
+    name: "mysqlIndex",
     data() {
       return {
         title: ''
-
-      };
+      }
     },
-  mounted() {
-    var that = this;
-    console.log(that.$route.query.params);
-    this.title = that.$route.query.params
-        // this.title = JSON.parse(that.$route.query.params).title
+    data() {
+      return {
+        title: ''
+      }
+    },
+    mounted() {
+      this.title = JSON.parse(this.$route.query.params).title
     }
   }
 </script>

@@ -23,6 +23,20 @@ Vue.use(Button)
   .use(Alert)
   .use(Drawer)
 ;Vue.prototype.$message = message ;
+
+router.beforeEach(function (to,from,next) {
+  console.log(to, from, next);
+  next({
+    query: {
+      path: '/cssIndex',
+      meta: {
+        title: 'html'
+      },
+      params: {title: 'html'}
+    }
+  });
+});
+
 new Vue({
   el: '#app',
   router,
